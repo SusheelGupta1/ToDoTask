@@ -22,7 +22,7 @@
                             <div class="input-group row ps-3">
                                 <div class="card col-md-8 border-0"> <p>{{data.task}}</p></div>
                             <button class="btn btn-outline-primary col me-1 ">edit</button>
-                            <div class="btn btn-outline-danger col">Delete</div>
+                            <div class="btn btn-outline-danger col" (click)="deleteTask(data)">Delete</div>
                             </div>
                         </div>
                     </div>
