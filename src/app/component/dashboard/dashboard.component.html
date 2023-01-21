@@ -1,0 +1,43 @@
+<div class="container-fluid bg-light">
+    <div class="container-fluid bg-light">
+        <div class="row mt-5" style="height: 600px;">
+            <div class="col"></div>
+            <div class="col-md-6 bg-white shadow">
+                <div class="card bg-secondary">
+                    <h4 class="text-white text-center ps-2 pt-2 pb-2">
+                        To Do Task
+                    </h4>
+                </div>
+                <div class="shadow">
+                    <div class="input-group p-3">
+                        <input type="text" class="form-control" placeholder="Add Your Task"
+                         name="task" [(ngModel)]="addTaskData">
+                        <button class="btn btn-outline-success" type="button" id="button-addon2" (click)="addTask()">Add</button>
+                    </div>
+                </div>
+                <h3 class="text-primary mt-5">Task:</h3>
+                <div style="overflow-y:auto;height:350px">
+                    <div class="m-3" >
+                        <div class="p-2 shadow border" *ngFor="let data of taskArr">
+                            <div class="input-group row ps-3">
+                                <div class="card col-md-8 border-0"> <p>{{data.task}}</p></div>
+                            <button class="btn btn-outline-primary col me-1 ">edit</button>
+                            <div class="btn btn-outline-danger col">Delete</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 
+<div class="row">
+    <div class="col"  *ngFor="let data of taskArr">
+        <p>{{data.id}}</p>
+    </div>
+</div> -->
